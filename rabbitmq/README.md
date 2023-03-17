@@ -196,6 +196,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `podAnnotations`                        | RabbitMQ Pod annotations. Evaluated as a template                                                                        | `{}`            |
 | `updateStrategy.type`                   | Update strategy type for RabbitMQ statefulset                                                                            | `RollingUpdate` |
 | `statefulsetLabels`                     | RabbitMQ statefulset labels. Evaluated as a template                                                                     | `{}`            |
+| `statefulsetAnnotations`                | RabbitMQ statefulset annotations. Evaluated as a template                                                                | `{}`            |
 | `priorityClassName`                     | Name of the priority class to be used by RabbitMQ pods, priority class needs to be created beforehand                    | `""`            |
 | `podAffinityPreset`                     | Pod affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`                                      | `""`            |
 | `podAntiAffinityPreset`                 | Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`                                 | `soft`          |
@@ -361,7 +362,6 @@ The command removes all the Kubernetes components associated with the chart and 
 | `volumePermissions.resources.limits`                   | Init container volume-permissions resource limits                                                                                 | `{}`                    |
 | `volumePermissions.resources.requests`                 | Init container volume-permissions resource requests                                                                               | `{}`                    |
 | `volumePermissions.containerSecurityContext.runAsUser` | User ID for the init container                                                                                                    | `0`                     |
-
 
 The above parameters map to the env variables defined in [bitnami/rabbitmq](https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq). For more information please refer to the [bitnami/rabbitmq](https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq) image documentation.
 
